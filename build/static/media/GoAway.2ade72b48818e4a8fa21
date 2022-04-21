@@ -1,0 +1,14 @@
+import React from 'react';
+
+const GoAway = () => {
+
+    function say(){
+        alert('Go away, i warned you, you can')
+    }
+
+    return (
+        <button onClick={say}>Click or end</button>
+    );
+};
+
+export default GoAway;
