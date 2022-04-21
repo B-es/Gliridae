@@ -4,7 +4,7 @@ import './App.css';
 
 function App() { 
 
-  return <button> Das ist unsere allein Knopf und noch </button>;
+  return <button> Gliridae </button>;
   
 }
 
