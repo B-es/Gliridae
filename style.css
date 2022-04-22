@@ -20,36 +20,11 @@ img {
     margin-top: 10px;
 }
 
-input {
-    border: 2px solid #d19879;
-    outline: none;
-    border-radius: 3px;
-    padding: 5px;
-}
 
-input:hover {
-    border-color: gray;
-}
-
-input:focus {
-    border-color: blue;
-}
-
-button {
-    border: 2px solid #d19879;
-    border-radius: 3px;
-    padding: 5px;
-    background-color: aquamarine;
-    color: rgb(0, 0, 0);
-    outline: none;
-}
-
-button:hover {
-    box-shadow: 0 0 10px black;
-}
-
-button:active {
-    box-shadow: 0 0 10px rgb(0, 255, 30);
+body {
+    display:grid;
+    justify-content: center;
+    align-items: center;
 }
 
 div {
@@ -59,3 +34,38 @@ div {
 .container {
     width: 600px;
 }
+
+.drop {
+    position:static;
+    background-color: rgb(255, 0, 0);
+    height: 0;
+    overflow: hidden;
+    width: 300px;
+    transition: .5s;
+}
+
+.drop2 {
+    position:static;
+    background-color: rgb(255, 0, 0);
+    height: 0;
+    overflow: hidden;
+    width: 300px;
+    transition: .5s;
+}
+
+.drop {
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+}
+
+.drop2 {
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+}
+button:hover ~ .drop {
+    height: 500px;
+}
+
+
