@@ -1,0 +1,61 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-image: url("https://kidpassage.com/images/resorts/volgogradskaya-oblast/Volgograd-oblast958699191.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1{
+    font-weight: 300;
+    font-size: 60px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input {
+    border: 2px solid #d19879;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+input:hover {
+    border-color: gray;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+button {
+    border: 2px solid #d19879;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 0 10px black;
+}
+
+button:active {
+    box-shadow: 0 0 10px rgb(0, 255, 30);
+}
+
+div {
+    text-align: center;
+}
+
+.container {
+    width: 600px;
+}
