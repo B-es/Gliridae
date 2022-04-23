@@ -37,35 +37,16 @@ div {
 
 .drop {
     position:static;
-    background-color: rgb(255, 0, 0);
+    background-color: powderblue;
     height: 0;
     overflow: hidden;
     width: 300px;
-    transition: .5s;
+    transition: .8s;
+    
 }
 
-.drop2 {
-    position:static;
-    background-color: rgb(255, 0, 0);
-    height: 0;
-    overflow: hidden;
-    width: 300px;
-    transition: .5s;
-}
-
-.drop {
-    text-align: center;
-    color: white;
-    margin-top: 35px;
-}
-
-.drop2 {
-    text-align: center;
-    color: white;
-    margin-top: 35px;
-}
 button:hover ~ .drop {
-    height: 500px;
+    height: 600px;
 }
 
 
