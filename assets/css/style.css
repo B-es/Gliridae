@@ -1,0 +1,67 @@
+body {
+    margin:0;
+    font-family: 'Lato',
+    sans-serif;
+    font-family: 'Libre Baskerville',
+    serif;
+    size: 28 px;
+    /* line-height: 1.6; - межстрочный интервал */
+    color: #000000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.intro{
+    width: 100%;
+    height: 100vh;
+
+    background:
+    url("../images/background1\ \(1\).jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#pic {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+.nav{
+    font-size: 14 px;
+    text-transform: uppercase;
+}
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    color: #5288B6;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color .2s linear;
+}
