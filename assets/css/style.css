@@ -43,9 +43,14 @@ h1 {
     right: 0;
     z-index: 1000;
 }
+.intro-logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;  
+}
 .header__inner{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 #pic {
@@ -54,14 +59,21 @@ h1 {
     margin: 10px;
 }
 .nav{
-    font-size: 14 px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .nav__link {
     display: inline-block;
     vertical-align: top;
+
     color: #5288B6;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 80px;
     transition: color .2s linear;
+
+}
+
+
+.nav__link:hover{
+    color: #9EFFAF;
 }
