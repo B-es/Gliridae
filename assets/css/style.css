@@ -41,12 +41,13 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 3000;
 }
-.intro-logo{
-  font-size: 30px;
+.logo{
+    /*background-image: url(logo.svg);*/
+  font-size: 20px;
   font-weight: 700;
-  color: #000000;  
+  color: #000000;
 }
 .header__inner{
     display: flex;
@@ -54,23 +55,29 @@ h1 {
     align-items: center;
 }
 #pic {
-    width: 250px;
-    height: 250px;
-    margin: 10px;
+    width: 300px;
+    height: 200px;
+    margin: -50px;
+    margin-top: -20px;
+    z-index: 2000;
+    position: fixed;
 }
 .nav{
     font-size: 20px;
     text-transform: uppercase;
+    min-width: 360;
+    z-index: 2000;
+    
 }
 .nav__link {
     display: inline-block;
     vertical-align: top;
+    
 
     color: #5288B6;
     text-decoration: none;
     margin: 0 80px;
     transition: color .2s linear;
-
 }
 
 

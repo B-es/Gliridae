@@ -1,21 +1,10 @@
+function test(){
+    alert("Что жмёшь-то, я и так никого тут не трогаю")
+}
 
 //Анимация при наведении мыши на иконку
 
 
-let bigsize = "300";
-let smallsize = "150";
-let pic;
-
-function changeSize(im){
-    if(im.height == bigsize) im.height = smallsize;
-    else im.height = bigsize;
-}
-
-window.onload = function(){
-    pic = document.querySelector("#pic")
-    console.log(pic);
-
-}
 
 //Анимация скролла
 
@@ -39,4 +28,39 @@ window.addEventListener('show', function() {
         dosome2();
     })
     ticking = true;
+})
+
+
+//Кнопки, что вечно мертвы
+
+function goUrl(){
+    let right = confirm("Хочешь посмотреть видик?..", 'Gliridae...');
+
+    if(right){
+        document.location.href ="https://youtu.be/D-SQqppuGvc"; 
+    }
+    else{
+        alert("Как хочешь...")
+    }
+}
+
+
+
+//Добавление событий после полной прогрузки DOM
+
+window.addEventListener('DOMContentLoaded', function(){
+
+    //Иконка
+    let pic = document.getElementById('pic');
+    pic.addEventListener('click', test)
+    console.log(pic);
+
+    //Кнопки
+    let elem = document.getElementsByClassName('nav__link')
+    console.log(elem[2]);
+    for (let index = 0; index < elem.length; index++) {
+        elem[index].addEventListener('click', goUrl);
+        
+    }
+
 })
