@@ -85,3 +85,18 @@ h1 {
     color: #9EFFAF;
 }
 
+@font-face {
+	font-family: 'applej'; 
+	src: url(../../Res/applejuc.ttf); 
+}
+
+
+#glir{
+    position: absolute;
+    font-family: "applej";
+    font-size: 80px;
+    z-index: 2;
+    text-align: center;
+    top: -10%;
+    left: 1%;
+}

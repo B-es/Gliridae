@@ -25,7 +25,8 @@ window.addEventListener('DOMContentLoaded', function(){
     document.getElementById('closer2').addEventListener('click', closeco);
     document.getElementById('closer').addEventListener('click', closeal);
     document.getElementById('aler').addEventListener('click', closeal);
-    
+    document.getElementById('btn_tx').addEventListener('mouseover', newColor);
+    document.getElementById('btn_tx').addEventListener('mouseout',  newColor2);
 })
 
 
@@ -90,8 +91,10 @@ function confirmtion(text, text_2, func, text_3, n){
             alertion(text_3)
         }
     }
-    document.removeElementById('btn_tx').addEventListener('click', func);
+    document.getElementById('btn_tx').removeEventListener('click', func);
     document.removeEventListener("click", event => n = event.target.id)
+
+    
 }
 
 
@@ -135,3 +138,16 @@ function goUrl(){
     document.location.href ="https://youtu.be/D-SQqppuGvc";  
 }
 
+function newColor(){
+    document.getElementById('btn_tx').classList.add('befo');
+    if(document.getElementById('btn_tx').classList.contains('afte')){
+        document.getElementById('btn_tx').classList.remove('afte');
+    }
+}
+
+function newColor2(){
+    document.getElementById('btn_tx').classList.add('afte');
+    if(document.getElementById('btn_tx').classList.contains('befo')){
+        document.getElementById('btn_tx').classList.remove('befo');
+    }
+}
