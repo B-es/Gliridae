@@ -1,5 +1,8 @@
 body {
     margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     font-family: 'Lato',
     sans-serif;
     font-family: 'Libre Baskerville',
@@ -7,6 +10,7 @@ body {
     size: 28 px;
     /* line-height: 1.6; - межстрочный интервал */
     color: #000000;
+    position: absolute;
 }
 
 *,
@@ -92,7 +96,7 @@ h1 {
 
 
 #glir{
-    position: absolute;
+    position: fixed;
     font-family: "applej";
     font-size: 80px;
     z-index: 2;
