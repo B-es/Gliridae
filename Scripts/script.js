@@ -4,7 +4,7 @@ let n;
 window.addEventListener('DOMContentLoaded', function(){
 
 
-
+    window.addEventListener("click", event => console.log(event.target.id))
     //Иконка
     let pic = document.getElementById('pic');
     pic.addEventListener('click', test)
@@ -27,10 +27,9 @@ window.addEventListener('DOMContentLoaded', function(){
     document.getElementById('aler').addEventListener('click', closeal);
     document.getElementById('btn_tx').addEventListener('mouseover', newColor);
     document.getElementById('btn_tx').addEventListener('mouseout',  newColor2);
-})
 
 
-//Новые всплывающие окна
+    //Новые всплывающие окна
 
 //Предупреждение
 function alertion(text){
@@ -38,36 +37,51 @@ function alertion(text){
     elem.textContent = text;
     console.log(text);
 
-    aler = document.querySelector('.aler');
-    aler.style.display = 'block';
-
+    
     clos = document.querySelector('#closer');
-    clos.style.display = 'block';
+    aler = document.querySelector('#aler');
+    aler.classList.add('aler_on');
+    if(aler.classList.contains('aler_off')){
+        aler.classList.remove('aler_off')
+    }
+    
+    clos.style.animation = 'fades .35s linear 0s 1';
+    aler.style.animation = 'fade .35s linear 0s 1';
+    
+    clos.classList.add('closer');
+    if(clos.classList.contains('closer_off')){
+        clos.classList.remove('closer_off')
+    }
 
-    aler.style.opacity = "1";
-    clos.style.opacity = '0.5';
+
 }
 
 //Закрытие окна
 function closeal(){
-    aler = document.querySelector('.aler');
+    aler = document.querySelector('#aler');
     clos = document.querySelector('#closer');
-    setTimeout(opa(clos), 500);
-    setTimeout(opa(aler), 500);
-    aler.addEventListener('transitionend', function(e){
-        dis(clos);
-        dis(aler);
-    })
 
-        clos.addEventListener('transitionend', function(e){
-            dis(clos);
-            dis(aler);
-        })
+    clos.style.animation = 'fades2 .35s linear 0s 1';
+    aler.style.animation = 'fade2 .35s linear 0s 1';
+
+
+    setTimeout(function(){
+        aler.classList.remove('aler_on');
+        aler.classList.add('aler_off');
+
+        clos.classList.remove('closer');
+        clos.classList.add('closer_off');
+    }, 350)
+    
+    
+
+
+    return false;
 }
 
 //Подтверждение
 function confirmtion(text, text_2, func, text_3, n){
-    document.addEventListener("click", event => n = event.target.id)
+    window.addEventListener("click", event => n = event.target.id)
     elem2 = document.querySelector('#btn_tx')
     elem2.textContent = text_2;
     console.log(text_2);
@@ -76,14 +90,21 @@ function confirmtion(text, text_2, func, text_3, n){
     elem.textContent = text;
     console.log(text);
 
-    conf = document.querySelector('.conf');
-    conf.style.display = 'block';
-
+    
     clos = document.querySelector('#closer2');
-    clos.style.display = 'block';
-
-    conf.style.opacity = '1';
-    clos.style.opacity = '0.5';
+    conf = document.querySelector('#conf');
+    conf.classList.add('conf_on');
+    if(conf.classList.contains('conf_off')){
+        conf.classList.remove('conf_off')
+    }
+    
+    clos.style.animation = 'fades .35s linear 0s 1';
+    conf.style.animation = 'fade .35s linear 0s 1';
+    
+    clos.classList.add('closer2');
+    if(clos.classList.contains('closer2_off')){
+        clos.classList.remove('closer2_off')
+    }
 
     document.getElementById('btn_tx').addEventListener('click', func);
     if(n !== undefined){
@@ -91,41 +112,33 @@ function confirmtion(text, text_2, func, text_3, n){
             alertion(text_3)
         }
     }
-    document.getElementById('btn_tx').removeEventListener('click', func);
     document.removeEventListener("click", event => n = event.target.id)
 
-    
+
 }
 
 
 //Закрытие окна
 function closeco(){
-    conf = document.querySelector('.conf');
+    conf = document.querySelector('#conf');
     clos = document.querySelector('#closer2');
-    setTimeout(opa(clos), 500);
-    setTimeout(opa(conf), 500);
-
-        clos.addEventListener('transitionend', function(e){
-            dis(clos);
-            dis(conf);
-        })
-
-        conf.addEventListener('transitionend', function(e){
-            dis(clos);
-            dis(conf);
-        })  
-       
+    clos.style.animation = 'fades2 .35s linear 0s 1';
+    conf.style.animation = 'fade2 .35s linear 0s 1';
+  
+    setTimeout(function(){
+        conf.classList.remove('conf_on');
+        conf.classList.add('conf_off');
+    
+        clos.classList.remove('closer2');
+        clos.classList.add('closer2_off');
+    }, 350)
+    
+    
     return false;
 }
 
-//Плавное закрытие
-function opa(elem){
-    elem.style.opacity = '0';
-}
+
     
-function dis(elem){
-    elem.style.display = 'none';
-}
 
 function test(){
     alertion("Что жмёшь-то, я никого не трогаю");
@@ -151,3 +164,6 @@ function newColor2(){
         document.getElementById('btn_tx').classList.remove('befo');
     }
 }
+})
+
+

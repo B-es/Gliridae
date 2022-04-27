@@ -9,6 +9,16 @@
     to {opacity: 0.5}
 }
 
+@keyframes fade2 {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes fades2 {
+    from {opacity: 0.5}
+    to {opacity: 0}
+}
+
 
 @font-face {
 	font-family: 'applej'; 
@@ -16,7 +26,7 @@
 }
 
 /*Предупреждение*/
-.aler {
+.aler_on {
     background-color: rgb(173, 6, 0);
     position: fixed;
     z-index: 6050;
@@ -28,8 +38,12 @@
     overflow: hidden;
     transition: opacity .35s linear;
     animation: fade .35s linear 0s 1;
+    opacity: 1;
+    display: block;
+}
+
+.aler_off{
     display: none;
-    opacity: 0;
 }
     
 #altx {
@@ -47,7 +61,7 @@
 
 
 
-#closer{
+.closer{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -55,21 +69,29 @@
     background-color: black;
     transition: opacity .35s linear;
     animation: fades .35s linear 0s 1;
+    display: block;
+    opacity: 0.5;
+}
+
+.closer_off{
     display: none;
 }
 
-#closer2{
-    position: absolute;
+.closer2{
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 6000;
     background-color: black;
     transition: opacity .35s linear;
     animation: fades .35s linear 0s 1;
-    display: none;
+    display: block;
+    opacity: 0.5;
 }
 
-
+.closer2_off{
+    display: none;
+}
 
 /*Подтверждение*/
 
@@ -108,10 +130,11 @@
     top: 0; left: 0; bottom: 0; right: 0;
     cursor: pointer;
     transition: color linear 0.3s;
+    z-index: 6050;
 }
 
 
-.conf {
+.conf_on {
     background-color: rgb(173, 6, 0);
     position: absolute;
     z-index: 6050;
@@ -123,8 +146,12 @@
     overflow: hidden;
     transition: opacity .35s linear;
     animation: fade .35s linear 0s 1;
-    display: none;
+    display: block;
     
+}
+
+.conf_off{
+    display: none;
 }
     
 #conftx {
