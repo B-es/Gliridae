@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/alertion.css">
     <link href="https://fontawesome.com/v6/docs/web/setup/get-started" rel="stylesheet">
-    <script src="Scripts/script.js"></script>
     <title>Grilidae</title>
 </head>
 <body>
+    <!--Здесь чисто красотень и ничего более (c) Иван-->
+    <label id="closer"></label>
+    <label id="closer2"></label>
+    <div class="alertion">
+        <div class="aler" id="aler">
+            <p id="altx">Вот так вот всё и работает...</p>
+        </div>
+    </div>
+    <div class="confirmtion">
+        <div class="conf" id="conf">
+            <p id="conftx">Вот так вот всё и работает...</p>
+            <div id="spcbtn">
+                <label id="btn_tx" onclick='spybtn(this)'></label>
+            </div>
+        </div>
+    </div>
+    
     <!--Иконку отсюда никуда не двигать, ибо так она нормально работает с наложением текста и не конфликтует, а то скрипты не срабатывли (с) Иван-->
     <div class="header">
         <div class="container">
