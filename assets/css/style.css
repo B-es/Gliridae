@@ -98,6 +98,12 @@ h1 {
 
  i{
     color: #5288B6;
+    text-decoration: none;
+    margin: 0 50px;
+    transition: color .2s linear;
+}
+i:hover{
+    color: #9EFFAF; 
 }
 
 
