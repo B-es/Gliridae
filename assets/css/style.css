@@ -45,11 +45,13 @@ h1 {
 }
 /*Логотип*/
 .logo{
-    /*background-image: url(logo.svg);*/
+    
   font-size: 20px;
   font-weight: 700;
   color: #000000;
+
 }
+
 #pic {
     width: 300px;
     height: 200px;
