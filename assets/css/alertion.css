@@ -46,7 +46,7 @@
     display: none;
 }
     
-#altx {
+.altx_on {
     top: 20%;
     text-align: center;
     position: relative;
@@ -57,9 +57,12 @@
     text-decoration-color: blink;
     color: white;
     word-wrap:break-word;
+    display: block;
 }
 
-
+.altx_off {
+    display: none;
+}
 
 .closer{
     position: fixed;

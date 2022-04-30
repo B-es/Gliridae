@@ -18,9 +18,6 @@ window.addEventListener('DOMContentLoaded', function(){
         
     }
 
-    
-    
-    
     document.getElementById('conf').addEventListener('click', closeco);
     document.getElementById('closer2').addEventListener('click', closeco);
     document.getElementById('closer').addEventListener('click', closeal);
@@ -29,7 +26,38 @@ window.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btn_tx').addEventListener('mouseout',  newColor2);
 
 
-    //Новые всплывающие окна
+
+    //Анимация скролла
+    let element = document.querySelector("#bb");
+    let options = {
+        root: document.querySelector('intro'),
+        rootMargin: "0px",
+        threshold: 0.7,
+    };
+
+    let callback = function(entries, observer){
+        entries.forEach(entry=> {
+            if(!entry.isIntersecting){
+                console.log('Я работаю.');
+                entry.target.classList.add('bottom_back_off');
+                
+            }
+            else{
+                console.log('Я работаю.');
+                entry.target.classList.add('bottom_back');
+                entry.target.classList.remove('bottom_back_off');
+                
+            }
+            
+        })
+    }
+
+    let observer = new IntersectionObserver(callback, options);
+   
+    observer.observe(element);
+   
+
+//Новые всплывающие окна
 
 //Предупреждение
 function alertion(text){
@@ -37,6 +65,10 @@ function alertion(text){
     elem.textContent = text;
     console.log(text);
 
+    elem.classList.add('altx_on');
+    if(elem.classList.contains('altx_off')){
+        elem.classList.remove('altx_off')
+    }
     
     clos = document.querySelector('#closer');
     aler = document.querySelector('#aler');
@@ -60,7 +92,7 @@ function alertion(text){
 function closeal(){
     aler = document.querySelector('#aler');
     clos = document.querySelector('#closer');
-
+    elem = document.querySelector('#altx');
     clos.style.animation = 'fades2 .35s linear 0s 1';
     aler.style.animation = 'fade2 .35s linear 0s 1';
 
@@ -68,6 +100,9 @@ function closeal(){
     setTimeout(function(){
         aler.classList.remove('aler_on');
         aler.classList.add('aler_off');
+
+        elem.classList.remove('altx_on');
+        elem.classList.add('altx_off');
 
         clos.classList.remove('closer');
         clos.classList.add('closer_off');
@@ -90,6 +125,10 @@ function confirmtion(text, text_2, func, text_3, n){
     elem.textContent = text;
     console.log(text);
 
+    elem.classList.add('altx_on');
+    if(elem.classList.contains('altx_off')){
+        elem.classList.remove('altx_off')
+    }
     
     clos = document.querySelector('#closer2');
     conf = document.querySelector('#conf');
@@ -128,6 +167,9 @@ function closeco(){
     setTimeout(function(){
         conf.classList.remove('conf_on');
         conf.classList.add('conf_off');
+
+        elem.classList.remove('altx_on');
+        elem.classList.add('altx_off');
     
         clos.classList.remove('closer2');
         clos.classList.add('closer2_off');
@@ -165,5 +207,4 @@ function newColor2(){
     }
 }
 })
-
 
