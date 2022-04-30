@@ -31,8 +31,8 @@ window.addEventListener('DOMContentLoaded', function(){
     let element = document.querySelector("#bb");
     let options = {
         root: document.querySelector('intro'),
-        rootMargin: "0px",
-        threshold: 0.7,
+        rootMargin: "2px",
+        threshold: 0.2,
     };
 
     let callback = function(entries, observer){
