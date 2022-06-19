@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function(){
         elem[index].addEventListener('click', () => confirmtion('Тут будет музычка, хочешь?..', "Да...", goUrl, "Ну как хочешь...", n));
         
     }
-
+    document.getElementById("AUS").addEventListener('click', () => confirmtion('Давай, тут отдохнёт твоя душа, хочешь?..', "Да...", Gliridae, "Ну как хочешь...", n));
     document.getElementById('conf').addEventListener('click', closeco);
     document.getElementById('closer2').addEventListener('click', closeco);
     document.getElementById('closer').addEventListener('click', closeal);
@@ -208,3 +208,6 @@ function newColor2(){
 }
 })
 
+function Gliridae(){
+    document.location.href ="https://www.youtube.com/watch?v=4h2-2Aj3xmQ"; 
+}

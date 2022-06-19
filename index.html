@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Indie+Flower&family=Lato:ital,wght@1,900&family=Lobster&family=Merriweather&family=Poppins:wght@300&family=Roboto+Slab:wght@800&family=Rokkitt&family=Smooch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../Gliridae/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../Gliridae/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../Gliridae/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/c725a8fd7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <title>Grilidae</title>
 </head>
 <body>
@@ -40,48 +41,75 @@
         <div class="container">
             <div class="header__inner">
                
-                <nav class="nav">
-                    <img class="logo" src="../Gliridae/assets/images/logo3.svg" id="pic">
+                <nav>
+                    
+                    <img class="logo" src="../assets/images/logo3.svg" id="pic">
                     <a class="nav__link" href="#">Карты</a>
                     <a class="nav__link" href="#">Форум</a>
                     <a class="nav__link" href="#">Конструктор</a>
                     <a class="nav__link" href="#">Галерея</a>
-                    <i class="fa-solid fa-magnifying-glass logo"></i> <!--це есть иконки поиска и человечка, с панелью будет разобраться уже проще (с)Соня-->
+                    <a class="nav__link" href="#">О нас</a>
+                    <form>
+                        <input type="text" placeholder="Поиск...">
+                        <button type="submit"></button>
+                      </form>
                     <i class="fa-solid fa-user logo"></i>
-                   
                 </nav>
                 
             </div>
         </div>
     </div>
-   
+   <!--
+<img src ="../assets/images/background.svg" id="back" >
+    -->
+    
+    <div class="back">
+        <img class="background" src="../assets/images/background.svg" id="back">
+    </div>
+
     <div class="info">
-        
         <div class = "container1">
-           <p class="brassic" face="Arial">Туристический гид </p> <p class="font" face = "applej"> Gliridae</p>  
+            <p class="font" face = "applej" id="AUS">Gliridae</p>
+            <p class="hi">Вдохновленный природой. Соня поможет вам в путешествии.</p>  <!--Ну а что еще ожидать в 5 утра?-->
+            <button class="btn-2">В дорогу...</button>
         </div>
-        <div class="background"><img src ="../Gliridae/assets/images/background.svg" id="back"><!--img class="photo" src="../Gliridae/assets/images/photo1.jpg"></div-->
+        
+        <!--Блок с первой страницей-->
+        <div class = "precont">
+           
+        </div>
         
     </div>
     
-    <!--div class="intro">
-        
-        
-            <div class="bottom_back_off" id="bb">
-                <div class="victors_panel">
-                    <div class="Us">
-                        <p>Это мы и больше нам нечего сказать вам...</p>
-                    </div>
-                    <div class="Us">
-                        <p>Здесь могла быть твоя история... Ну вот опять.</p>
-                    </div>
-                <div class="Us">ООО "Бездельники" снова бездельничает, как удивительно...</div>
-                <div class="Us"><p>Каждый день одно и тоже, ходишь в вуз и всё не можешь,
-                    сдал зачёт - теперь свобода, а на деле вновь работа...
-                </p></div>
-            </div> 
-            </div>  
-    </div-->
+
+    <!--Блок контента-->
+    <div class = "cont">
+        <p>Если бы не мы, вы бы никогда не смогли увидеть такой фигни...</p>
+        <p>Мы где-то здесь...</p>
+        <div class="map" style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/org/volgogradskiy_gosudarstvenny_tekhnicheskiy_universitet/1094248524/?utm_medium=mapframe&utm_source=maps"
+             style="color:#eee;font-size:12px;position:absolute;top:0px;">Волгоградский государственный технический университет</a>
+             <a href="https://yandex.ru/maps/38/volgograd/category/university_college/184106140/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Волгограде</a>
+             <iframe src="https://yandex.ru/map-widget/v1/-/CCUJjUqCdB" width="700" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+    </div>
+
+
+
+    <div class="bottom_back_off" id="bb">
+        <div class="victors_panel">
+            <div class="Us">
+                <p>Это мы и больше нам нечего сказать вам...</p>
+            </div>
+            <div class="Us">
+                <p>Здесь могла быть твоя история... Ну вот опять.</p>
+            </div>
+            <div class="Us">ООО "Бездельники" снова бездельничает, как удивительно...</div>
+            <div class="Us"><p>Каждый день одно и тоже, ходишь в вуз и всё не можешь,
+                    сдал зачёт - теперь свобода, а на деле вновь работа...</p>
+            </div>
+        </div> 
+    </div>     
     
     <link rel="stylesheet" href="assets/css/alertion.css">
     <script src="Scripts/script.js"></script>
