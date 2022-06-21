@@ -2,7 +2,7 @@ body {
     margin:0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: fixed;
     size: 28 px;
     /* line-height: 1.6; - межстрочный интервал */
@@ -206,15 +206,16 @@ i:hover{
    
 }
 #AUS{
-    
+    width: 621px;
+    text-align: center;
     font-size: 150px;
-    margin: 0 1px;
+    margin: auto;
     z-index: 10;
     text-shadow:
     1px 1px white,
     2px 2px #777;
     color: #333; 
-    transition: color .2s linear;
+    transition: color .4s linear;
 }
 
 #AUS:hover{
@@ -254,10 +255,10 @@ i:hover{
 	display: inline-block;	
 	box-sizing: border-box;
 	padding: 0 15px;
-	margin: 0px 15px 15px 800px;
+	margin: auto;
 	outline: none;
-	border: 1px solid #7952b3;  
-	border-radius: 5px;
+	border: 1px solid #A1A906;  
+	border-radius: 10px;
 	height: 80px;
     width: 250px;
 	line-height: 38px;
@@ -271,13 +272,14 @@ i:hover{
 	appearance: none;
 	touch-action: manipulation;  
     top: 300px;
+    transition: 1s, radial;
 }
 .btn-2:focus {
 	box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
 }
 .btn-2:hover {
-	background-color: #61428f;
-	border-color: #61428f;
+	background-color: #A1A906;
+	border-color: #A1A906;
 }
 .btn-2:active {
 	background-color: #61428f !important;
@@ -287,29 +289,27 @@ i:hover{
 	pointer-events: none;
 	opacity: 0.65;
 }
-.victors_panel{  
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(65, 65, 65);
-    text-align: center;
-    height: auto;
-    width: auto;
-    overflow: hidden;
+.content{
+   width: 100%;
+   height: min-content; 
+   text-align: center;
+   display: flex;
+   margin-top: 480px
+   
 }
-
-.Us:hover{
-    color: white;
+h3{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    color:#333;
+    margin: 0 auto;
 }
-.Us{
-    display: inline-block;
-    margin: 30px;
-    margin-top: 3%;
-    transition: color linear .3s;
+.text{
+    width: min-content;
+    height: 70px;
+    left: 50px
 }
-
-
 .back{
-  
-    
     position: relative;
     z-index: -1;
     width: 100%;
@@ -332,7 +332,7 @@ i:hover{
 .cont{
     width: 100%;
     max-width: 880px;
-    margin: 0 auto;
+    margin: 350px auto auto auto;
     font-size: 20px;
     text-align: center;
     color: #3A3B41; 
@@ -341,13 +341,14 @@ i:hover{
     flex-direction: column;
     justify-content: center;
     text-transform: uppercase;
-    z-index: 3000;
+    z-index: 0;
     font-family: 'Rokkitt', serif;
+    position: relative;
 }
 
 .cont p{
     
-    z-index: 10;
+    z-index: 0;
     text-shadow:
     1px 1px white,
     2px 2px #777;
@@ -395,3 +396,127 @@ i:hover{
 .map{
     margin: 0 1px;
 }
+
+
+
+.img_us{
+    width: 18vh;
+    height: 22vh;
+    position: relative;
+    border-radius: 2vh;
+    
+}
+
+.victors_panel p{
+    font-size: medium;
+    color: #3D807B;
+    text-align: center;
+    transition: color linear .3s;
+}
+
+.victors_panel p:hover{
+    color: white;
+}
+
+.victors_panel{  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0); 
+    height: 45vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.bottom_back{
+    background-color: #333;
+    height: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    transition: opacity linear .4s;
+    
+}
+
+.bottom_back_off{
+    opacity: 0;
+}
+
+.Us:hover{
+    color: white;
+}
+.Us{
+    display: inline-block;
+    margin: 30px;
+    margin-top: 3%;
+    transition: color linear .3s;
+    text-align: center;
+}
+
+.img_us_box_1{
+    margin-top: 4vh;
+    margin-left: 5vh;
+    border: 1px solid #3D807B;
+    border-radius: 2vh;
+    text-align: center;
+    width: 18vh;
+    height: 22vh;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img_us_box_2{
+    margin-left: 5vh;
+    border: 1px solid #3D807B;
+    border-radius: 2vh;
+    text-align: center;
+    width: 18vh;
+    height: 22vh;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img_us_box_3{
+    margin-left: 5vh;
+    border: 1px solid #3D807B;
+    border-radius: 2vh;
+    text-align: center;
+    width: 18vh;
+    height: 22vh;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img_us_box_4{
+    margin-left: 5vh;
+    border: 1px solid #3D807B;
+    border-radius: 2vh;
+    text-align: center;
+    width: 18vh;
+    height: 22vh;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.subscribes{
+    width:48%;
+    height: inherit;
+    display: inline-block;
+   text-align: center;
+    z-index: 2;
+    position: absolute;
+    padding-top: 5vh;
+}
+
+.Develop{
+    margin-top: 0;
+    width: 52%;
+    height: 100%;
+    background-color: #ffffff;
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    display: inline-block;
+    z-index: 3;
+}
+
+
+

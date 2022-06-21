@@ -9,13 +9,12 @@ window.addEventListener('DOMContentLoaded', function(){
     let pic = document.getElementById('pic');
     pic.addEventListener('click', test)
     console.log(pic);
-
+    pic.addEventListener('click', sound);
     //Кнопки
     let elem = document.getElementsByClassName('nav__link')
     console.log(elem[2]);
-    for (let index = 0; index < elem.length; index++) {
-        elem[index].addEventListener('click', () => confirmtion('Тут будет музычка, хочешь?..', "Да...", goUrl, "Ну как хочешь...", n));
-        
+    for (let index = 0; index < elem.length-1; index++) {
+        elem[index].addEventListener('click', () => confirmtion('Тут будет музычка, хочешь?..', "Да...", goUrl, "Ну как хочешь...", n)); 
     }
     document.getElementById("AUS").addEventListener('click', () => confirmtion('Давай, тут отдохнёт твоя душа, хочешь?..', "Да...", Gliridae, "Ну как хочешь...", n));
     document.getElementById('conf').addEventListener('click', closeco);
@@ -24,8 +23,16 @@ window.addEventListener('DOMContentLoaded', function(){
     document.getElementById('aler').addEventListener('click', closeal);
     document.getElementById('btn_tx').addEventListener('mouseover', newColor);
     document.getElementById('btn_tx').addEventListener('mouseout',  newColor2);
+    document.getElementById('main_btn').addEventListener('click', () => confirmtion('Сюда нельзя...', "Льзя...", main_Button, "Ну как хочешь...", n));
 
-
+    //Здесь текста для наших иконок
+    this.document.getElementById('D1').addEventListener('click',()=> alertion("Её рекорды похожи на: спала меньше всех, почти адекватна."));
+    this.document.getElementById('D2').addEventListener('click',()=> alertion("Оживил мёртвое и сам умер..."));
+    this.document.getElementById('D3').addEventListener('click',()=> alertion("Хотел всё уничтожить, но только хотел."));
+    this.document.getElementById('D4').addEventListener('click',()=> alertion("Мы о нём знаем столько же, сколько и вы."));
+    //Вот эти две строчки отвечают за приветствие
+    let audio2 = new Audio('https://zvukogram.com/mp3/cats/1200/o-privet.mp3');
+    audio2.play();
 
     //Анимация скролла
     let element = document.querySelector("#bb");
@@ -56,6 +63,26 @@ window.addEventListener('DOMContentLoaded', function(){
    
     observer.observe(element);
    
+
+    let btnScrollDown = document.querySelector('#US');
+    let body = document.querySelector('body');
+    console.log(body);
+    function scrollDown() {
+      let windowCoords = body.clientHeight;
+      (function scroll() {
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+            window.scrollBy(0, 20);
+            setTimeout(scroll, 0);
+            console.log(window.pageYOffset);
+        }
+        if (window.pageYOffset >= windowCoords) {
+          window.scrollTo(0, windowCoords);
+        }
+      })();
+    }
+  
+    btnScrollDown.addEventListener('click', scrollDown);
+
 
 //Новые всплывающие окна
 
@@ -183,7 +210,7 @@ function closeco(){
     
 
 function test(){
-    alertion("Что жмёшь-то, я никого не трогаю");
+    confirmtion("Что жмёшь-то, я никого не трогаю", "Иди отсель туды...", importantCow, "С одной стороны правильно...", n);
 }
 
 
@@ -211,3 +238,18 @@ function newColor2(){
 function Gliridae(){
     document.location.href ="https://www.youtube.com/watch?v=4h2-2Aj3xmQ"; 
 }
+
+function main_Button(){
+    document.location.href ="https://www.youtube.com/watch?v=qqK1FrO3BdM&t=0s";
+}
+
+function sound(){
+    let audio = new Audio(); // Создаём новый элемент Audio
+    audio.src = 'https://d6.hotplayer.ru/downloadm/c12beb07c92eab99c0533a78b0fa7eea/273234793_456241210/f10ba770dae0-1c447b9037c1-6464e9c1b4d/%D1%82%D1%8F%D0%B6%D0%B5%D0%BB%D0%BE...%20-%20%D1%82%D1%8F%D0%B6%D0%B5%D0%BB%D0%BE....mp3'; // Указываем путь к звуку "клика"
+    audio.autoplay = true; // Автоматически запускаем
+}
+
+function importantCow(){
+    document.location.href = '//www.youtube.com/watch?v=kk3_5AHEZxE';
+}
+

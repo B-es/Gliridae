@@ -48,7 +48,7 @@
                     <a class="nav__link" href="#">Форум</a>
                     <a class="nav__link" href="#">Конструктор</a>
                     <a class="nav__link" href="#">Галерея</a>
-                    <a class="nav__link" href="#">О нас</a>
+                    <a class="nav__link" id="US" href="#">О нас</a>
                     <form>
                         <input type="text" placeholder="Поиск...">
                         <button type="submit"></button>
@@ -63,28 +63,26 @@
 <img src ="../assets/images/background.svg" id="back" >
     -->
     
-    <div class="back">
-        <img class="background" src="../assets/images/background.svg" id="back">
-    </div>
+   
 
     <div class="info">
         <div class = "container1">
             <p class="font" face = "applej" id="AUS">Gliridae</p>
             <p class="hi">Вдохновленный природой. Соня поможет вам в путешествии.</p>  <!--Ну а что еще ожидать в 5 утра?-->
-            <button class="btn-2">В дорогу...</button>
+            <button class="btn-2" id="main_btn">В дорогу...</button>
         </div>
-        
-        <!--Блок с первой страницей-->
-        <div class = "precont">
-           
+        <div class="content">
+            <h3>О проекте</h3>
+            <p class="text">Gliridae – туристический гид, который сделает путешествия проще и приятнее. Вы можете составить собственный маршрут и получить топографическую карту местности. О каждом необычном месте доступны краткая информация и инетересные факты.</p>
         </div>
-        
     </div>
-    
+    <div class="back">
+        <img class="background" src="../assets/images/background.svg" id="back">
+    </div>
 
     <!--Блок контента-->
     <div class = "cont">
-        <p>Если бы не мы, вы бы никогда не смогли увидеть такой фигни...</p>
+        
         <p>Мы где-то здесь...</p>
         <div class="map" style="position:relative;overflow:hidden;">
             <a href="https://yandex.ru/maps/org/volgogradskiy_gosudarstvenny_tekhnicheskiy_universitet/1094248524/?utm_medium=mapframe&utm_source=maps"
@@ -93,23 +91,49 @@
              <iframe src="https://yandex.ru/map-widget/v1/-/CCUJjUqCdB" width="700" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
     </div>
+<section id="team" class="team">
+    <div class="Develope">
+        <h3>Разработчики</h3>
 
+        <div id="D2" class="img_us_box_1">
+            <h2>Васильев Иван</h2>
+            <img class="img_us" src="Res/Avie/Ivan.jpg" >       
+        </div>
+        
+        <div id="D1" class="img_us_box_2">
+            <h2>Маркина Софья</h2>
+            <img  class="img_us" src="Res/Avie/Sonya.jpg" >         
+        </div>
 
+        <div id="D3" class="img_us_box_3">
+            <h2> Крушинский Виктор</h2>
+            <img class="img_us" src="Res/Avie/Victor.jpg" >       
+        </div>
 
+        <div id="D4" class="img_us_box_4">
+            <h2>Баклан Сергей</h2>
+            <img class="img_us" src="Res/Avie/Sergey.png" >   
+        </div>
+    </div>
+</section>
     <div class="bottom_back_off" id="bb">
         <div class="victors_panel">
-            <div class="Us">
-                <p>Это мы и больше нам нечего сказать вам...</p>
-            </div>
-            <div class="Us">
-                <p>Здесь могла быть твоя история... Ну вот опять.</p>
-            </div>
-            <div class="Us">ООО "Бездельники" снова бездельничает, как удивительно...</div>
-            <div class="Us"><p>Каждый день одно и тоже, ходишь в вуз и всё не можешь,
-                    сдал зачёт - теперь свобода, а на деле вновь работа...</p>
+
+            <div class="subscribes">
+                <div class="Us">
+                    <p>Это мы и больше нам нечего сказать вам...</p>
+                </div>
+                <div class="Us">
+                    <p>Здесь могла быть твоя история... Ну вот опять.</p>
+                </div>
+                <div class="Us"><p>ООО "Бездельники" снова бездельничает, как удивительно...</p></div>
+                <div class="Us"><p>Каждый день одно и тоже, ходишь в вуз и всё не можешь,
+                        сдал зачёт - теперь свобода, а на деле вновь работа...</p>
+                </div>
             </div>
         </div> 
     </div>     
+    <!--Прикол-->
     
     <link rel="stylesheet" href="assets/css/alertion.css">
     <script src="Scripts/script.js"></script>
