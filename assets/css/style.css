@@ -544,7 +544,7 @@ hover-image-scale{
     border-radius: 2vh;
     text-align: center;
     width: 30vh;
-    height: 22vh;
+    height: 30vh;
     display: inline-block;
     cursor: pointer;
 }
@@ -555,7 +555,7 @@ hover-image-scale{
     border-radius: 2vh;
     text-align: center;
     width: 30vh;
-    height: 22vh;
+    height: 30vh;
     display: inline-block;
     cursor: pointer;
 }
@@ -566,7 +566,7 @@ hover-image-scale{
     border-radius: 2vh;
     text-align: center;
     width: 30vh;
-    height: 22vh;
+    height: 30vh;
     display: inline-block;
     cursor: pointer;
 }
@@ -577,7 +577,7 @@ hover-image-scale{
     border-radius: 2vh;
     text-align: center;
     width: 30vh;
-    height: 22vh;
+    height: 30vh;
     display: inline-block;
     cursor: pointer;
 }
@@ -599,6 +599,5 @@ hover-image-scale{
     border-bottom-right-radius: 2vh;
     z-index: 3;
 }
-
 
 

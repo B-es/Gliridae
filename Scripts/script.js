@@ -67,11 +67,12 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let btnScrollDown = document.querySelector('#US');
     let body = document.querySelector('body');
+    
     console.log(body);
     function scrollDown() {
       let windowCoords = body.clientHeight;
       (function scroll() {
-        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight - (document.body.offsetHeight/4 - 100)) {
             window.scrollBy(0, 20);
             setTimeout(scroll, 0);
             console.log(window.pageYOffset);
