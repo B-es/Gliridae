@@ -474,10 +474,6 @@ p{
 #AUS{
     cursor: pointer;
 }
-.map{
-    margin-left: 18em;
-}
-
 
 
 .img_us{
@@ -605,4 +601,13 @@ h2{
     color: #333;
     font-family: 'Roboto';
     font-size: 150%;
+}
+ .container3{
+    width: 80%;
+   margin: 0 auto;
+   margin-top: 2em;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
 }
