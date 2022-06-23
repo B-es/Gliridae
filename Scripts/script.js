@@ -30,9 +30,10 @@ window.addEventListener('DOMContentLoaded', function(){
     this.document.getElementById('D2').addEventListener('click',()=> alertion("Оживил мёртвое и сам умер..."));
     this.document.getElementById('D3').addEventListener('click',()=> alertion("Хотел всё уничтожить, но только хотел."));
     this.document.getElementById('D4').addEventListener('click',()=> alertion("Мы о нём знаем столько же, сколько и вы."));
+    
     //Вот эти две строчки отвечают за приветствие
-    let audio2 = new Audio('https://zvukogram.com/mp3/cats/1200/o-privet.mp3');
-    audio2.play();
+    /*let audio2 = new Audio('https://zvukogram.com/mp3/cats/1200/o-privet.mp3');
+    audio2.play();*/
 
     //Анимация скролла
     let element = document.querySelector("#bb");

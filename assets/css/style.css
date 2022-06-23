@@ -303,6 +303,7 @@ h3{
     font-family: 'Roboto Slab', serif;
     color:#333;
     margin: 0 auto;
+    text-align: center;
 }
 .text{
     width: min-content;
@@ -329,6 +330,69 @@ h3{
     position:static;
 }
 
+section{
+    padding-top: 113px;
+}
+p{
+    margin: 0;
+    font-size: 20px;
+}
+.container2{
+    width: 1300px;
+   margin: 0 auto;
+   margin-top: 2em;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    padding-top: 2em;
+    width: 600px;
+    
+}
+.right{
+    width:600px;
+    margin-left: 3em;
+    
+}
+.photo1{
+    width: 600px;
+}
+.hover-image-scale{
+    width:600px;
+}
+.hover-image-scale {
+    display: inline-block; 
+    overflow: hidden; /* Скрываем всё за контуром */
+  }
+  .hover-image-scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; 
+  }
+  .hover-image-scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+  }
+  
+
+.precont{
+    width: 100%;
+    height: 60vh;
+    width: 180vh;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+.cont p{
+    
+    z-index: 0;
+    text-shadow:
+    1px 1px white,
+    2px 2px #777;
+    color: #333; 
+    transition: color .2s linear;
+}
+
 .cont{
     width: 100%;
     max-width: 880px;
@@ -345,28 +409,45 @@ h3{
     font-family: 'Rokkitt', serif;
     position: relative;
 }
-
-.cont p{
+.btn-3 {
     
-    z-index: 0;
-    text-shadow:
-    1px 1px white,
-    2px 2px #777;
-    color: #333; 
-    transition: color .2s linear;
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: auto;
+	outline: none;
+	border: 1px solid #A1A906;  
+	border-radius: 10px;
+	height: 50px;
+    width: 180px;
+	line-height: 38px;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #fff;
+	background-color: #3D807B;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+    transition: 1s, radial;
+    margin-top: 2em;
 }
-
-.precont{
-    width: 100%;
-    height: 60vh;
-    width: 180vh;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 10vh;
+.btn-3:focus {
+	box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
 }
-
-
-
+.btn-3:hover {
+	background-color: #A1A906;
+	border-color: #A1A906;
+}
+.btn-3:active {
+	background-color: #61428f !important;
+	border-color: #61428f !important;
+}
+.btn-3:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
 #photo{
     top: 5%;
     margin-left: 2%;
@@ -394,18 +475,22 @@ h3{
     cursor: pointer;
 }
 .map{
-    margin: 0 1px;
+    margin-left: 18em;
 }
 
 
 
 .img_us{
-    width: 18vh;
+    width: 30vh;
     height: 22vh;
     position: relative;
     border-radius: 2vh;
     
 }
+hover-image-scale{
+    width:600px;
+}
+
 
 .victors_panel p{
     font-size: medium;
@@ -454,44 +539,44 @@ h3{
 
 .img_us_box_1{
     margin-top: 4vh;
-    margin-left: 5vh;
+    
     border: 1px solid #3D807B;
     border-radius: 2vh;
     text-align: center;
-    width: 18vh;
+    width: 30vh;
     height: 22vh;
     display: inline-block;
     cursor: pointer;
 }
 
 .img_us_box_2{
-    margin-left: 5vh;
+   margin-left: 2em;
     border: 1px solid #3D807B;
     border-radius: 2vh;
     text-align: center;
-    width: 18vh;
+    width: 30vh;
     height: 22vh;
     display: inline-block;
     cursor: pointer;
 }
 
 .img_us_box_3{
-    margin-left: 5vh;
+   margin-left: 2em;
     border: 1px solid #3D807B;
     border-radius: 2vh;
     text-align: center;
-    width: 18vh;
+    width: 30vh;
     height: 22vh;
     display: inline-block;
     cursor: pointer;
 }
 
 .img_us_box_4{
-    margin-left: 5vh;
+   margin-left: 2em;
     border: 1px solid #3D807B;
     border-radius: 2vh;
     text-align: center;
-    width: 18vh;
+    width: 30vh;
     height: 22vh;
     display: inline-block;
     cursor: pointer;
@@ -507,14 +592,11 @@ h3{
     padding-top: 5vh;
 }
 
-.Develop{
-    margin-top: 0;
-    width: 52%;
-    height: 100%;
+.description{
+    margin: 0 auto;
     background-color: #ffffff;
     border-top-right-radius: 2vh;
     border-bottom-right-radius: 2vh;
-    display: inline-block;
     z-index: 3;
 }
 
